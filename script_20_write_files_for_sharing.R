@@ -21,7 +21,7 @@ unique(tmp)
 out <- data.frame(NAME = rownames(md),
                   biosample_id = gsub("RML", "mouse", gsub("PBS", "mouse", md$orig.ident)),
                   donor_id = gsub("HP", "", gsub("CX", "", gsub("RML", "mouse", gsub("PBS", "mouse", md$orig.ident)))),
-                  species = "NCBI:txid10090",
+                  species = "NCBITaxon_10090",
                   species__ontology_label = "Mus musculus",
                   disease = gsub("Mock", "PATO_0000461", gsub("RML", "MONDO:0005429", md$Treatment)),
                   disease__ontology_label = gsub("Mock", "normal", gsub("RML", "prion disease", md$Treatment)),
